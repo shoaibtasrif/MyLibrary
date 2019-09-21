@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content_1 %}
+<title>Person List</title>
+
+{% endblock content_1 %}
+
+
+{% block content_2 %}
+
+{% for p in people %}
+<a href="{{p.id}}/">{{p.name}}</a>
+{% endfor %}
+
+<a href="add/"> Add New Person </a>
+
+{% endblock content_2 %}
