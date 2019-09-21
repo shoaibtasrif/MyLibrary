@@ -15,7 +15,8 @@ class MyClass(models.Model):
     email = models.EmailField(unique=True)
 
     class Meta:
-        constraints = [ models.UniqueConstraint(fields=['user', 'name'], name='unique class') ]
+        constraints = [models.UniqueConstraint(
+            fields=['user', 'name'], name='unique class')]
 
 
 class MyForm(forms.ModelForm):
@@ -27,6 +28,7 @@ class MyForm(forms.ModelForm):
 class MyView(views.View):
     form_class = MyForm
     template_name = 'form.html'
+
     def get(self, request):
         form = self.form_class()
         # self.form_class({'user': request.user}) will bind the data and therefore invoke validation
@@ -45,7 +47,7 @@ class MyView(views.View):
                 ob.save()
                 return render(request, self.template_name)
             except ValidationError as ve:
-                msg =  ve.message_dict[NON_FIELD_ERRORS]
+                msg = ve.message_dict[NON_FIELD_ERRORS]
                 return render(request, self.template_name, {'msg': msg, 'form': form})
             except Exception as e:
                 return render(request, self.template_name, {'form': form, 'msg': e})
@@ -53,12 +55,8 @@ class MyView(views.View):
             return render(request, self.template_name, {'form': form})
 
 
-class MyUpdateView(views.View):
-
-    def get(self):
-        pass
+# form.html
 '''
-form.html
 {% extends 'base.html' %}
 
 {% block content_1 %}
@@ -82,7 +80,7 @@ form.html
 {% endblock %}
 '''
 
-
+# NB
 '''
 Form validation steps:
 - forms.full_clean(),is_valid(),errors
