@@ -60,7 +60,7 @@ class PersonForm(forms.ModelForm):
         '''
         <class 'django.http.request.QueryDict'>
         csrfmiddlewaretoken 8ifH6Xed7mhcxTKRazO7KKfEp4dhmfgFJLIrbdlBqf6B98GcgP9eoKyJ61BsEbxT
-        name gege
+        name shoaib
         birthdate 2016-01-01
         country 2
         city 3
