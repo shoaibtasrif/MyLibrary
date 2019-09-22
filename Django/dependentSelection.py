@@ -52,12 +52,12 @@ class PersonForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['city'].queryset = City.objects.none()
-        # print('hi')
+        '''
         print(type(self.data))
         for k1 in self.data:  # iterating dictionary
             print(k1, self.data.get(k1, None))
 
-        '''
+        # output
         <class 'django.http.request.QueryDict'>
         csrfmiddlewaretoken 8ifH6Xed7mhcxTKRazO7KKfEp4dhmfgFJLIrbdlBqf6B98GcgP9eoKyJ61BsEbxT
         name shoaib
