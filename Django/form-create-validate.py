@@ -86,11 +86,11 @@ Form validation steps:
 - forms.full_clean(),is_valid(),errors
     - field.clean()
         - to_python()
-        - validate() -> field type validation
+        - validate()             -> override for custom validation of this field everywhere
         - run_validators()
-    - forms.clean_<field_name>() -> field instance validation, should be overriden in case of for field specific valn
-    - forms.clean() -> more than one field validation, invoked after the all fields individual validation,
-          should be overriden in case of form validation
+    - forms.clean_<field_name>() -> override for custom validation of this field only in this form
+    - forms.clean()              -> more than one field validation, invoked after the all fields individual validation,
+                                 -> should be overriden in case of form validation
 
 Model Validation steps:
 - Model.clean_fields() -> individual field validation

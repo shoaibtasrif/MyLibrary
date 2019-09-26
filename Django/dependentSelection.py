@@ -44,6 +44,7 @@ def load_cities(request):
     return render(request, 'load_cities.html', {'cities': cities})
 
 
+# in case of modelform
 class PersonForm(forms.ModelForm):
     class Meta:
         model = Person
@@ -52,15 +53,15 @@ class PersonForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['city'].queryset = City.objects.none()
-        # print('hi')
+        '''
         print(type(self.data))
         for k1 in self.data:  # iterating dictionary
             print(k1, self.data.get(k1, None))
 
-        '''
+        # output
         <class 'django.http.request.QueryDict'>
         csrfmiddlewaretoken 8ifH6Xed7mhcxTKRazO7KKfEp4dhmfgFJLIrbdlBqf6B98GcgP9eoKyJ61BsEbxT
-        name gege
+        name shoaib
         birthdate 2016-01-01
         country 2
         city 3
@@ -77,6 +78,32 @@ class PersonForm(forms.ModelForm):
             self.fields['city'].queryset = self.instance.country.city_set.order_by(
                 'name')
 
+'''
+# in case of non-modelform
+
+from django import forms
+from homepage.models import MyChoice, Country, City
+
+
+class SearchRestaurantForm(forms.Form):
+    name = forms.CharField(max_length=100, required=False)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['country'] = forms.ChoiceField(
+            choices=[(o.id, str(o)) for o in Country.objects.all()], required=False)
+        self.fields['city'] = forms.ChoiceField(
+            choices=[(o.id, str(o)) for o in City.objects.none()], required=False)
+
+        if 'country' in self.data:
+            try:
+                country_id = int(self.data.get('country'))
+                self.fields['city'] = forms.ChoiceField(
+                    choices=[(o.id, str(o)) for o in City.objects.filter(country_id=country_id)], required=False)
+
+            except (ValueError, TypeError):
+                pass
+'''
 
 class PersonListView(ListView):
     model = Person
