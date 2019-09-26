@@ -11,8 +11,9 @@ def Fly(*args, **kwargs):
     var = dic.get('a', None) # get the value of key@a  from the dictionary(dic) which is a string('A')
     print(var)
 
-    for keys,values in kwargs.items(): # iterating keyword arguments(**kwargs)
-        print(keys, values)
+    for keys in kwargs: # kwargs is a dictionary <class 'dict'>
+        print(keys, kwargs.get(keys,None) )
+        values = kwargs.get(keys, None)
         for k1 in values: # iterating dictionary
             print(k1,values.get(k1, None))
 
@@ -23,7 +24,6 @@ def Fly(*args, **kwargs):
 Fly('My Book', 'is New', initial={'a': 'A', 'b': 'B'}, upto = {'x': 'X', 'y': 'Y'})
 
 '''
-Output:
 {'a': 'A', 'b': 'B'}
 A
 initial {'a': 'A', 'b': 'B'}
