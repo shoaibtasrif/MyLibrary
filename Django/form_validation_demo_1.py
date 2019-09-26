@@ -14,22 +14,28 @@ class MyForm(forms.Form):
             if len(name) < 8:
                 raise forms.ValidationError([
                     forms.ValidationError("at least 8 chars"),
-                    forms.ValidationError("too short hahahhahahahah"),
-                    forms.ValidationError("too short hahahhahahahah"),
-                    forms.ValidationError("too short hahahhahahahah"),
-                    forms.ValidationError("too short hahahhahahahah")
                 ])
 
         print('myform clean name')
         return name  # always return a value even if not been changed to replace the value n cleaned data
+        '''
+        name <ul class="errorlist"><li>at least 8 chars</li></ul>
+        '''
 
     def clean(self):
+        print('hi')
         name = self.cleaned_data.get('name', None)
         title = self.cleaned_data.get('title', None)
 
         if name and title:
             if len(name) < len(title):
-                raise forms.ValidationError("name to be gte title")
+
+                # name <ul class="errorlist"><li>make it large</li></ul>
+                self.add_error('name', 'make it large')
+                raise forms.ValidationError([
+                    # __all__ <ul class="errorlist nonfield"><li>name to be gte title</li></ul>
+                    forms.ValidationError('name lte title'),
+                ])
 
 
 class MyView(views.View):
@@ -45,7 +51,12 @@ class MyView(views.View):
             print(form.as_table())
             return HttpResponse('yes')
         else:
-            print(form.as_table())
+            # print(type(form.errors)) # <class 'django.forms.utils.ErrorDict'>
+            # print(form.as_table())
+            for key in form.errors:
+                print(key)
+                print(form.errors.get(key, None))
+
             return render(request, 'form.html', {'form': form})
 
 
