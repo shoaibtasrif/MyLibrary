@@ -1,0 +1,53 @@
+html{
+    background-image: url("../../Pictures/water-lily-3784022__340.jpeg");
+    background-attachment: fixed;
+
+
+
+
+}
+
+body{
+    //height: 100%;
+
+
+
+}
+
+.parent{
+    overflow:auto;
+
+    //height: 100%;
+}
+
+.fr{
+    float:right;
+    width:25%;
+    background-color: rgba(248, 13, 8, 0.5);
+
+}
+
+.fl{
+    float:left;
+    margin-left: 2%;
+    margin-top: 2%;
+    width:30%;
+    background-color: rgba(248, 13, 8, 0);
+}
+
+.border{
+    border:2px solid black;
+}
+
+.block{
+    display:block;
+}
+.fl:hover{
+    background-color:rgba(255,255,255,.7);
+    background-position: 0 0;
+}
+.fl:active{
+    background-color:rgba(255,255,255,1.0);
+    background-position: 0 -20px;
+}
+

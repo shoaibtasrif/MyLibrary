@@ -1,0 +1,52 @@
+
+p.two {
+    overflow: scroll;
+}
+h2{
+    width: 400px;
+    font-size: 90%;
+    line-height: 1.2em;
+    color: #0088dd;
+    border-bottom: 1px solid #0088dd;
+}
+
+p {
+    min-height: 10px;
+    max-height: 30px;
+    border: 3px solid #0088dd;
+    overflow : scroll;
+}
+
+p.three {
+    margin: 10px auto 10px auto;// center align
+    //margin: 20px;
+    padding: 10px;
+    max-height: inherit;
+    border-width: 100px 4px 100px 4px;
+    border-color: #0088dd;
+
+}
+
+p.one {
+    border-width :10px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    //border-style: solid;
+    -moz-border-image: url("../../Pictures/tom.jpeg")
+    11 11 11 11 stretch;
+    -webkit-border-image: url("../../Pictures/tom.jpeg")
+    11 11 11 11 stretch;
+    border-image: url("../../Pictures/tom.jpeg")
+    11 11 11 11 repeat;}
+
+p.one {
+
+}
+
+
+
+div{
+    display: inline;
+    visibility: hidden;
+}

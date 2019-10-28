@@ -1,0 +1,120 @@
+
+<!doctype html/>
+<html>
+<body>
+<img src="../../Pictures/tom.jpeg"/>
+<form action="http://www.example.com/login.php">
+    <p>Username:
+        <input type="text" name="username" size="15"
+               maxlength="30" />
+    </p>
+    <p>Password:
+        <input type="password" name="password" size="15"
+               maxlength="30" />
+    </p>
+    <textarea name="comments" cols="20" rows="4">Enter
+		 your comments...</textarea>
+
+    <p>Please select your favorite genre:
+        <br />
+        <input type="radio" name="genre" value="rock"
+               checked="checked" /> Rock
+        <input type="radio" name="genre" value="pop" />
+        Pop
+        <input type="radio" name="genre" value="jazz" />
+        Jazz
+    </p>
+
+    <p>Please select your favorite music service(s):
+        <br />
+        <input type="checkbox" name="service"
+               value="itunes" checked="checked" /> iTunes
+        <input type="checkbox" name="service"
+               value="lastfm" /> Last.fm
+        <input type="checkbox" name="service"
+               value="spotify" /> Spotify
+    </p>
+
+    <p>What device do you listen to music on?</p>
+    <select name="devices" >
+        <option value="ipod">iPod</option>
+        <option value="radio">Radio</option>
+        <option value="computer">Computer</option>
+
+    </select>
+
+    <p>Do you play any of the following instruments?
+        (You can select more than one option by holding
+        down control on a PC or command key on a Mac
+        while selecting different options.)</p>
+
+    <select name="instruments" size="3" multiple="multiple">
+        <option value="guitar" selected="selected">Guitar</option>
+        <option value="drums">Drums</option>
+        <option value="keyboard"
+                selected="selected">Keyboard</option>
+        <option value="bass">Bass</option>
+    </select>
+
+    <img src="../../Pictures/tom.jpeg"/>
+    <img src="../../Pictures/tom.jpeg"/>
+    <p>Upload your song in MP3 format:</p>
+    <input type="file" name="user-song" /><br />
+    <input type="submit"  value="SUBMIT" />
+
+
+    <input type="image" src="../../Pictures/Screenshot from 2019-04-30 10-51-25.png"
+           width="100" height="20" />
+
+
+    ==========================================================================
+    <br/>
+    <button><img src="../../Pictures/tom.jpeg" alt="add"
+                 width="100" height="100" /> Add</button>
+    <input type="hidden" name="bookmark"
+           value="lyrics" />
+    <input type="hidden" name="bookmark"
+           value="lyrics" />
+
+    Gender:
+    <input id="female" type="radio" name="gender"
+           value="f">
+    <label for="female">Female</label>
+    <input id="male" type="radio" name="gender"
+           value="m">
+    <label for="male">Male</label>
+
+    <fieldset>
+        <legend>Contact details</legend>
+        <label>Email:<br />
+            <input type="email" name="email" /></label><br />
+        <label>Mobile:<br />
+            <input type="text" name="mobile" required="required"/></label><br />
+        <label>Telephone:<br />
+            <input type="text" name="telephone" /></label><br/>
+        url <br/>
+        <input type="url" name="website" placeholder="www"/>
+    </fieldset>
+
+</form>
+
+<form action="http://www.example.com/login/"
+      method="post">
+    <label for="username">Username:</label>
+    <input id="username" type="text" name="username"
+           required="required" /></title><br />
+    <label for="password">Password:</label>
+    <input id="password"type="password" name="password"
+           required="required" />
+    <input type="submit" value="Submit" />
+</form>
+
+<form action="http://www.example.org/search.php">
+    <p>Search:</p>
+    <input type="search" name="search"
+           placeholder="Enter keyword" />
+    <input type="submit" value="Search" />
+</form>
+
+</body>
+</html>
