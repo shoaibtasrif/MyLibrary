@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="bs-23.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+        .black
+        {
+            color: black;
+        }
+
+        progress[value]{
+            height: 13px;
+            color: blueviolet;
+        }
+        
+        .blue-header{
+            color: rgb(27, 89, 165);
+        }
+        .center-text{
+            text-align: center;
+        }
+        .pro-pic{
+            border-radius: 50%; width: 200px; height: 200px;
+        }
+        .bottom-padding{
+            padding-bottom: 20px;
+        }
+        .left-bar-header{
+            color: aqua;
+        }
+
+        .flex-container
+        {
+            padding-left: 10%;
+            padding-right: 10%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #right-bar{
+            padding-left: 50px;
+            padding-top: 50px;
+            max-width: 70%;
+            height: 100%;
+        }
+        #left-bar{
+            padding-top: 50px;
+            color: white;
+            background-color: rgb(40, 59, 83);
+            width: 30%;
+            padding-left: 20px;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .experience-table{
+            padding: 10px;
+        }
+        .checked{
+            color: yellow;
+        }
+        .english-skill-td{
+            padding-left: 10px;
+        }
+
+        #reference{
+            
+            vertical-align: bottom;
+        }
+
+        .white-color{
+            color: white;
+        }
+
+        #profile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media(max-width: 1100px)
+        {
+            #profile
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .flex-container
+            {
+                padding-left: 30px;
+                padding-right: 30px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            #right-bar
+            {
+                padding-left: 30px;
+                padding-top: 30px;
+                width: 67%;
+                height: 100%;
+            }
+            #left-bar
+            {
+                padding-top: 50px;
+                color: white;
+                background-color: rgb(40, 59, 83);
+                width: 33%;
+                padding-left: 20px;
+                padding-right: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+
+        @media(max-width: 900px){
+            .flex-container
+            {
+                padding-left: 0%;
+                padding-right: 0%;
+            }
+            #right-bar{
+                padding-left: 30px;
+                padding-top: 30px;
+                min-width: 100%;
+                height: 100%;
+            }
+            #left-bar{
+                padding-top: 30px;
+                color: white;
+                background-color: rgb(40, 59, 83);
+                min-width: 100%;
+                padding-left: 10px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .left-sub-sect{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .left-padding-5
+        {
+            padding-left: 10px;
+        }
+  </style>
+</head>
+
+<body>
+      
+    <div class="flex-container">
+        <div id="left-bar">
+            <div id="profile" class="left-sub-sect bottom-padding white-color">
+                <div id="profile-pic" >
+                    <img src="toon-pro-pic.png" class="pro-pic">
+                </div>
+                <h3 class="center-text"><b>Abdullah Al Masud Tushar</b></h3>
+                <h4 class="left-bar-header center-text">Associate Software Engineer</h4>
+            </div>
+
+            <div id="technical-skills" class="bottom-padding white-color left-sub-sect">
+                <h4 class="left-bar-header"><b>TECHNICAL SKILLS</b></h4>
+                Python - 9/10 <br>
+                <progress  max="100" value="90"></progress> <br>
+                MySQL - 8/10<br>
+                <progress max="100" value="80"></progress><br>
+                Django - 9/10 <br>
+                <progress max="100" value="90"></progress><br>
+                JavaScript - 9/10<br>
+                <progress max="100" value="90"></progress><br>
+                AWS - 7/10<br>
+                <progress max="100" value="70"></progress><br>
+                Django REST - 8/10<br>
+                <progress max="100" value="80"></progress><br>
+                PHP - 7/10<br>
+                <progress max="100" value="70"></progress><br>
+                Asp.Net - 6/10<br>
+                <progress max="100" value="60"></progress><br>
+                Odoo - 6/10<br>
+                <progress max="100" value="60"></progress><br>
+            </div>
+
+            <div id="education" class="bottom-padding white-color left-sub-sect">
+                <h4 class="left-bar-header"><b>EDUCATION</b></h4>
+                <div>BSC in Computer Science & Engineering</div>
+                <div>East West University, Bangladesh</div>
+                <div>Passing Year: 2018</div>
+            </div>
+
+            <div id="english-skill" class="bottom-padding white-color left-sub-sect">
+                <h4 class="left-bar-header"><b>English Skill</b></h4>
+                <table>
+                    <tr>
+                        <td>Speaking</td>
+                        <td class="english-skill-td">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Writing</td>
+                        <td class="english-skill-td">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Listening</td>
+                        <td class="english-skill-td">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Reading</td>
+                        <td class="english-skill-td">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+
+            <div id="professional-skills" class="bottom-padding white-color left-sub-sect">
+                <h4 class="left-bar-header"><b>PROFESSIONAL SKILLS</b></h4>
+                Software Development - 9/10<br>
+                <progress max="100" value="90"></progress> <br>
+                Communication - 9/10<br>
+                <progress max="100" value="90"></progress> <br>
+                Team Work - 9/10<br>
+                <progress max="100" value="90"></progress> <br>
+                Negotiation & Persuasion - 9/10<br>
+                <progress max="100" value="90"></progress> <br>
+                Problem Solving - 8/10<br>
+                <progress max="100" value="80"></progress> <br>
+                Leadership - 8/10 <br>
+                <progress max="100" value="80"></progress> <br>
+                Analytical Skill - 8/10 <br>
+                <progress max="100" value="80"></progress> <br>
+                Management Skill - 8/10 <br>
+                <progress max="100" value="80"></progress> <br>
+                Punctuality - 9/10<br>
+                <progress max="100" value="90"></progress> <br>
+                Dedication - 10/10<br>
+                <progress max="100" value="100"></progress> <br>
+            </div>
+
+            <div id="reference" class="bottom-padding white-color left-sub-sect">
+                <h4 class="left-bar-header"><b>REFERENCE</b></h4>
+                <div>Raisul Kabir</div>
+                <div>CEO at Brain Station-23 Ltd.</div>
+                <div>Mail: raisul@bs-23.com</div>
+            </div>
+        </div>
+
+        <div id="right-bar" class="col-md-9" style="background-color: aliceblue;">
+            <div id="biography" class="bottom-padding" >
+                <h4 class="blue-header"><b>BIOGRAPHY</b></h4>
+                <p>
+                    With 2+ years of experience, currently working on an interesting game project
+                    conducting large scale requests and data. Mostly used technologies are Python,
+                    Django, Javascript, NoSQL, AWS components within both serverless and serveroriented architecture. Lightly obsessed with system design stuff having knowledge of
+                    a noob and dream to become a good software architect one day. Representing my
+                    university in national programming contests more than12 times including 3ACM ICPC
+                    Dhaka regional contest.
+                </p>
+            </div>
+
+            <div id="experiences" class="bottom-padding">
+                <h4 class="blue-header"><b>EXPERIENCES</b></h4>
+                <table>
+                    <tr>
+                        <td class="experience-table"><b>Jan 2019 - Continuing</b></td>
+                        <td class="experience-table"><b>Software Engineer</b><br> Brain Station 23 Ltd.</td>
+                    </tr>
+                    <tr>
+                        <td class="experience-table"><b>Jan 2018- Dec2019</b></td>
+                        <td class="experience-table"><b>Associate Software Engineer</b><br> Brain Station 23 Ltd.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="projects" class="bottom-padding" >
+                <h4 class="blue-header"><b>PROJECTS</b></h4>
+                <div class="left-padding-5">
+                    <h5 class="blue-header"><b>1. WiNiT</b></h5>
+                    <div >
+                        <p>
+                            <b>Technical Responsibility : </b> Build web & mobile app backend solutions in both serverless and
+                            server-oriented architecture with Amazon Web Services.
+                        </p>
+
+                        <p>
+                            <b>Technology Used:</b> Python, Django, JavaScript, JQuery, Bootstrap, AWS,
+                            Celery,Redis,Firebase.
+                        </p>
+
+                        <p>
+                            <b>Project Link: </b> https://play.google.com/store/apps/details?id=com.robi.winit
+                        </p>
+
+                        <p>
+                            <b>Project Duration:</b>1.5 Years
+                        </p>
+
+                        <p>
+                            <b>Short Description:</b> A mobile game application developed in serverless architecture for both
+                            Android and iOS platform aiming for large scale users. Users can play different quiz modules
+                            with this app and win cash prizes. The admin portal is developed with Django. Developing the
+                            project from scratch.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="left-padding-5">
+                    <h5 class="blue-header"><b>2. Shashtho</b></h5>
+                    <div>
+                        <p>
+                            <b>Technical Responsibility:</b>Developed admin portal with Django. Implemented clean and
+                            reusable code for several APIs using Django REST framework.
+                        </p>
+
+                        <p>
+                            <b>Technology Used:</b>Python, Django, AWS, PostgreSQL Celery, Django REST framework,
+                        </p>
+                        
+                        <p>
+                            <b>Project Link:</b>http://13.251.49.196/
+                        </p>
+                        
+                        <p>
+                            <b>Project Duration:</b>0.5 Months
+                        </p>
+                        
+                        <p>
+                            <b>Short Description:</b>Mobile application developed for worldwide users to have fast, easy and
+                            reasonable health-related services. The app not only serves with amazing features but also
+                            supports as a personal healthcare assistant. Available in both Android and iOS platform. The
+                            backend is developed with Django and AWS.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="left-padding-5">
+                    <h5 class="blue-header"><b>3. SEO Tool</b></h5>
+                    <div>
+                        <p>
+                            <b>Technical Responsibility:</b> Implemented & integrated web backend using Python, Django,
+                            RegEx, TextBlob, Beautifulsoup4 to build SEO research tools.
+                        </p>
+
+                        <p>
+                            <b>Technology Used:</b>Python, Django, Bootstrap, TextBlob, Beautifulsoup4,
+                        </p>
+
+                        <p>
+                            <b>Project Link: </b>http://seo.ebusiness-seo.com.au//
+                        </p>
+
+                        <p>
+                            <b>Project Duration:</b> 0.5 years
+                        </p>
+
+                        <p>
+                            <b>Short Description: </b>SEO tool is for SEO developers with features like Analyze Meta Tag,
+                            Keyword Density, Keyword Analysis, Comparative Reports, etc. Developed web backend
+                            services using Python, Django, RegEx, TextBlob, Beautifulsoup4. Analyzed several SEO
+                            research tools and developed features according to the requirement.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="left-padding-5">
+                    <h5 class="blue-header"><b>4. Brain Station 23 Performance Appraisal</b></h5>
+                    <div>
+                        <p>
+                            <b>Technical Responsibility:</b>To implement and modify the features from HR team is the main responsibility.
+                        </p>
+
+                        <p>
+                            <b>Technology Used:</b> Laravel, Javascript
+                        </p>
+
+                        <p>
+                            <b>Project Link:</b> http://172.16.229.103/home
+                        </p>
+                        
+                        <p>
+                            <b>Project Duration:</b>0.5 Months
+                        </p>
+
+                        <p>
+                            <b>Short Description:</b>One of the prominent software firm Brain station 23 has their own
+                            performance appraisal system in their management. Currently, I am working in this web
+                            application to make it more conducive for their human resource management team. The
+                            system's UI is based on a popular template named AdminLTE and backend is developed in
+                            Laravel.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="left-padding-5">
+                    <h5 class="blue-header"><b>5. Brain Station 23 Recruitment System</b></h5>
+                    <div>
+                        <p>
+                            <b>Technical Responsibility:</b> Developing and maintaining the system to take every kind of
+                            exams for recruiting future employees.
+                        </p>
+                        <p>
+                            <b>Technology Used:</b>Moodle, PHP
+                        </p>
+
+                        <p>
+                            <b>Project Link:</b> ttp://exam.bs-23.com/
+                        </p>
+
+                        <p>
+                            <b>Project Duration:</b> 1 years
+                        </p>
+                        <p>
+                            <b>Short Description:</b> have developed this system from very beginning. It is an automated
+                            recruitment system where Brain Station 23 takes every type of examinations for their future
+                            employees. In this system, a code compiler is included to manage the coding questions.
+                            Excluding descriptive questions, answers for every type of questions are marked
+                            automatically.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="achievements">
+                <h4 class="blue-header"><b>ACHIEVEMENTS</b></h4>
+                <ul>
+                    <li>1st at EWU IntraUniversity Programming Contest 2016</li>
+                    <li>3rd at City University Inter University Programming contest 2017</li>
+                    <li>Yellow Coder in Codechef (max rating- 2001)</li>
+                    <li>Problem solved: 1900+</li>
+                </ul>
+                <h5>CERTIFICATION</h5>
+                <ul>
+                    <li>AWSCertified SolutionArchitect</li>
+                    <li>AWSTechnical Professional</li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+    <script>
+
+    </script>
+
+
+</body>
+</html>
