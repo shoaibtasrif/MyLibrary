@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="bs-23.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+
         .black
         {
             color: black;
@@ -50,6 +50,9 @@
             padding-top: 50px;
             max-width: 70%;
             height: 100%;
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
         }
         #left-bar{
             padding-top: 50px;
@@ -87,8 +90,23 @@
             align-items: center;
         }
 
+        .left-padding-5
+        {
+            padding-left: 10px;
+        }
+
+        .right-bar-sect
+        {
+            min-width: 100%;
+        }
+
         @media(max-width: 1100px)
         {
+            left-padding-5
+            {
+                padding-left: 10px;
+            }
+            
             #profile
             {
                 display: flex;
@@ -111,7 +129,9 @@
                 padding-top: 30px;
                 width: 67%;
                 height: 100%;
+                background-color: aliceblue;
             }
+            
             #left-bar
             {
                 padding-top: 50px;
@@ -127,6 +147,11 @@
         }
 
         @media(max-width: 900px){
+            .left-padding-5
+            {
+                padding-left: 10px;
+            }
+            
             .flex-container
             {
                 padding-left: 0%;
@@ -137,6 +162,7 @@
                 padding-top: 30px;
                 min-width: 100%;
                 height: 100%;
+                background-color: aliceblue;
             }
             #left-bar{
                 padding-top: 30px;
@@ -155,10 +181,7 @@
                 align-items: center;
             }
         }
-        .left-padding-5
-        {
-            padding-left: 10px;
-        }
+        
   </style>
 </head>
 
@@ -168,7 +191,7 @@
         <div id="left-bar">
             <div id="profile" class="left-sub-sect bottom-padding white-color">
                 <div id="profile-pic" >
-                    <img src="toon-pro-pic.png" class="pro-pic">
+                    <img src="https://static.turbosquid.com/Preview/2016/07/21__09_28_45/Main.pngE93F5C49-400D-4937-951C-6CAF1948B907Original.jpg" class="pro-pic">
                 </div>
                 <h3 class="center-text"><b>Abdullah Al Masud Tushar</b></h3>
                 <h4 class="left-bar-header center-text">Associate Software Engineer</h4>
@@ -177,8 +200,8 @@
             <div id="technical-skills" class="bottom-padding white-color left-sub-sect">
                 <h4 class="left-bar-header"><b>TECHNICAL SKILLS</b></h4>
                 Python - 9/10 <br>
-                <progress  max="100" value="90"></progress> <br>
-                MySQL - 8/10<br>
+                <progress  max="100" value="90"></progress><br>
+                MySQL - 8/10 <br>
                 <progress max="100" value="80"></progress><br>
                 Django - 9/10 <br>
                 <progress max="100" value="90"></progress><br>
@@ -285,8 +308,8 @@
             </div>
         </div>
 
-        <div id="right-bar" class="col-md-9" style="background-color: aliceblue;">
-            <div id="biography" class="bottom-padding" >
+        <div id="right-bar" class="col-md-9" >
+            <div id="biography" class="bottom-padding right-bar-sect " >
                 <h4 class="blue-header"><b>BIOGRAPHY</b></h4>
                 <p>
                     With 2+ years of experience, currently working on an interesting game project
@@ -298,7 +321,7 @@
                 </p>
             </div>
 
-            <div id="experiences" class="bottom-padding">
+            <div id="experiences" class="bottom-padding right-bar-sect">
                 <h4 class="blue-header"><b>EXPERIENCES</b></h4>
                 <table>
                     <tr>
@@ -312,7 +335,7 @@
                 </table>
             </div>
 
-            <div id="projects" class="bottom-padding" >
+            <div id="projects" class="bottom-padding right-bar-sect" >
                 <h4 class="blue-header"><b>PROJECTS</b></h4>
                 <div class="left-padding-5">
                     <h5 class="blue-header"><b>1. WiNiT</b></h5>
@@ -422,7 +445,7 @@
                         <p>
                             <b>Project Duration:</b>0.5 Months
                         </p>
-
+                        
                         <p>
                             <b>Short Description:</b>One of the prominent software firm Brain station 23 has their own
                             performance appraisal system in their management. Currently, I am working in this web
@@ -462,19 +485,22 @@
                 </div>
             </div>
 
-            <div id="achievements">
+            <div id="achievements" class="right-bar-sect bottom-padding">
                 <h4 class="blue-header"><b>ACHIEVEMENTS</b></h4>
-                <ul>
-                    <li>1st at EWU IntraUniversity Programming Contest 2016</li>
-                    <li>3rd at City University Inter University Programming contest 2017</li>
-                    <li>Yellow Coder in Codechef (max rating- 2001)</li>
-                    <li>Problem solved: 1900+</li>
-                </ul>
-                <h5>CERTIFICATION</h5>
-                <ul>
-                    <li>AWSCertified SolutionArchitect</li>
-                    <li>AWSTechnical Professional</li>
-                </ul>
+                <div class="left-padding-5">
+                    <div>
+                    1st at EWU IntraUniversity Programming Contest 2016<br>
+                    3rd at City University Inter University Programming contest 2017<br>
+                    Yellow Coder in Codechef (max rating- 2001)<br>
+                    Problem solved: 1900+<br>
+                    <h5>CERTIFICATION</h5>
+                </div>
+                <div>
+                    AWSCertified SolutionArchitect<br>
+                    AWSTechnical Professional
+                </div>
+                </div>
+
             </div>
 
         </div>
