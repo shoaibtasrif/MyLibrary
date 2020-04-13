@@ -9,30 +9,44 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-
+      .padding-left-10
+        {
+            padding-left: 10px;
+        }
+        
         .black
         {
             color: black;
         }
 
-        progress[value]{
+        progress[value]
+        {
             height: 13px;
             color: blueviolet;
         }
         
-        .blue-header{
+        .blue-header
+        {
             color: rgb(27, 89, 165);
         }
-        .center-text{
+
+        .center-text
+        {
             text-align: center;
         }
-        .pro-pic{
+
+        .pro-pic
+        {
             border-radius: 50%; width: 200px; height: 200px;
         }
-        .bottom-padding{
+
+        .bottom-padding
+        {
             padding-bottom: 20px;
         }
-        .left-bar-header{
+
+        .left-bar-header
+        {
             color: aqua;
         }
 
@@ -45,7 +59,8 @@
             flex-wrap: wrap;
         }
 
-        #right-bar{
+        #right-bar
+        {
             padding-left: 50px;
             padding-top: 50px;
             max-width: 70%;
@@ -54,7 +69,9 @@
             display: flex;
             flex-direction: column;
         }
-        #left-bar{
+
+        #left-bar
+        {
             padding-top: 50px;
             color: white;
             background-color: rgb(40, 59, 83);
@@ -65,26 +82,34 @@
             flex-direction: column;
             align-items: stretch;
         }
-        .experience-table{
+
+        .experience-table
+        {
             padding: 10px;
         }
-        .checked{
+
+        .checked
+        {
             color: yellow;
         }
-        .english-skill-td{
+
+        .english-skill-td
+        {
             padding-left: 10px;
         }
 
-        #reference{
-            
+        #reference
+        {    
             vertical-align: bottom;
         }
 
-        .white-color{
+        .white-color
+        {
             color: white;
         }
 
-        #profile{
+        #profile
+        {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -102,7 +127,7 @@
 
         @media(max-width: 1100px)
         {
-            left-padding-5
+            .left-padding-5
             {
                 padding-left: 10px;
             }
@@ -131,7 +156,7 @@
                 height: 100%;
                 background-color: aliceblue;
             }
-            
+
             #left-bar
             {
                 padding-top: 50px;
@@ -146,7 +171,8 @@
             }
         }
 
-        @media(max-width: 900px){
+        @media(max-width: 900px)
+        {
             .left-padding-5
             {
                 padding-left: 10px;
@@ -157,14 +183,18 @@
                 padding-left: 0%;
                 padding-right: 0%;
             }
-            #right-bar{
+
+            #right-bar
+            {
                 padding-left: 30px;
                 padding-top: 30px;
                 min-width: 100%;
                 height: 100%;
                 background-color: aliceblue;
             }
-            #left-bar{
+
+            #left-bar
+            {
                 padding-top: 30px;
                 color: white;
                 background-color: rgb(40, 59, 83);
@@ -175,7 +205,9 @@
                 flex-direction: column;
                 align-items: stretch;
             }
-            .left-sub-sect{
+
+            .left-sub-sect
+            {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -311,7 +343,7 @@
         <div id="right-bar" class="col-md-9" >
             <div id="biography" class="bottom-padding right-bar-sect " >
                 <h4 class="blue-header"><b>BIOGRAPHY</b></h4>
-                <p>
+                <p  class="padding-left-10">
                     With 2+ years of experience, currently working on an interesting game project
                     conducting large scale requests and data. Mostly used technologies are Python,
                     Django, Javascript, NoSQL, AWS components within both serverless and serveroriented architecture. Lightly obsessed with system design stuff having knowledge of
@@ -485,33 +517,30 @@
                 </div>
             </div>
 
-            <div id="achievements" class="right-bar-sect bottom-padding">
-                <h4 class="blue-header"><b>ACHIEVEMENTS</b></h4>
-                <div class="left-padding-5">
-                    <div>
-                    1st at EWU IntraUniversity Programming Contest 2016<br>
-                    3rd at City University Inter University Programming contest 2017<br>
-                    Yellow Coder in Codechef (max rating- 2001)<br>
-                    Problem solved: 1900+<br>
-                    <h5>CERTIFICATION</h5>
-                </div>
-                <div>
-                    AWSCertified SolutionArchitect<br>
-                    AWSTechnical Professional
-                </div>
-                </div>
+            <div id="achievements" >
+                    <h4 class="blue-header"><b>ACHIEVEMENTS</b></h4>
+                    <div class="padding-left-10 bottom-padding">
+                        <div class="left-padding-5">
+                            
+                            • 1st at EWU IntraUniversity Programming Contest 2016<br>
+                            • 3rd at City University Inter University Programming contest 2017<br>
+                            • Yellow Coder in Codechef (max rating- 2001)<br>
+                            • Problem solved: 1900+<br>
+                            <h5><b>CERTIFICATION</b></h5>
+                            
+                            <div>
+                                • AWSCertified SolutionArchitect<br>
+                                • AWSTechnical Professional
+                            </div>
+                        </div>
+                    </div>
 
             </div>
-
         </div>
-        
     </div>
-
 
     <script>
 
     </script>
-
-
 </body>
 </html>
